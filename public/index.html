@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillProof</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">SkillProof</div>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#skills">Skills</a>
+        <a href="#add-skill">Add proof</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="overview" class="hero">
+        <div>
+          <p class="eyebrow">Verified expertise</p>
+          <h1>Show the skills behind the work.</h1>
+          <p class="subtitle">
+            SkillProof helps teams and individuals present a clear, evidence-backed profile of what they can do.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">View portfolio</button>
+            <button class="secondary">Add proof</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="metric">
+            <span>Average confidence</span>
+            <strong id="avg-confidence">0%</strong>
+          </div>
+          <div class="metric">
+            <span>Verified projects</span>
+            <strong id="verified-projects">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <h2>Skill portfolio</h2>
+          <span id="total-skills">0 skills</span>
+        </div>
+        <div id="skill-grid" class="skill-grid"></div>
+      </section>
+
+      <section id="add-skill" class="section form-section">
+        <div class="section-heading">
+          <h2>Add a proof item</h2>
+        </div>
+
+        <form id="skill-form">
+          <div class="field-row">
+            <label>
+              Skill name
+              <input type="text" id="name" name="name" placeholder="Example: Product Strategy" required />
+            </label>
+            <label>
+              Category
+              <input type="text" id="category" name="category" placeholder="Leadership" required />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              Level
+              <input type="text" id="level" name="level" placeholder="Advanced" required />
+            </label>
+            <label>
+              Confidence (%)
+              <input type="number" id="confidence" name="confidence" min="1" max="100" value="85" />
+            </label>
+          </div>
+
+          <label>
+            Proof statement
+            <textarea id="proof" name="proof" rows="4" placeholder="Describe the result, project, or evidence..." required></textarea>
+          </label>
+
+          <button type="submit" class="primary">Save skill proof</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
